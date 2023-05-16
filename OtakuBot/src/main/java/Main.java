@@ -1,5 +1,7 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.requests.GatewayIntent;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -33,7 +35,11 @@ public class Main {
         try {
             File configFile = new File(System.getProperty("user.home") + "/OneDrive/Desktop/Secrets.json"); //Path to discord bot token
             JDABuilder
-                    .createDefault(mapper.readTree(configFile).get("OTAKU_DISCORD_BOT_TOKEN").asText()) //Token Key in Secrets.json
+                    .createDefault(mapper.readTree(configFile).get("OTAKU_DISCORD_BOT_TOKEN").asText()) //Token key in Secrets.json
+                    .enableIntents(GatewayIntent.GUILD_MESSAGES,
+                            GatewayIntent.DIRECT_MESSAGES,
+                            GatewayIntent.MESSAGE_CONTENT
+                    ) // Enable intents including message content
                     .addEventListeners(new AniListBot())
                     .build();
         } catch (IOException e) {

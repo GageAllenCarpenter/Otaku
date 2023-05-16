@@ -9,7 +9,7 @@ public class AniListBot extends ListenerAdapter {
 
         String messageContent = event.getMessage().getContentRaw();
         if (messageContent.startsWith("!anime")) {
-            String query = messageContent.substring(7).trim();
+            System.out.println("Hello World");
             // Perform API request to AniList with the query
             // Parse the response and send the information back to the Discord channel
             // You can use a library like Retrofit or OkHttp for making HTTP requests to the AniList API
