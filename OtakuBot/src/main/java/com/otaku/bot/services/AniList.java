@@ -1,7 +1,9 @@
+package com.otaku.bot.services;
+
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
-public class AniListBot extends ListenerAdapter {
+public class AniList extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
