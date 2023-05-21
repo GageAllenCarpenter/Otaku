@@ -1,4 +1,4 @@
-# Otaku
+# Otaku (in progress)
 "Otaku" is a multifunctional project that combines a Discord bot and a website, catering to the interests and needs of anime and manga enthusiasts. The repository houses the code and resources for both components, allowing users to engage with the Otaku community through different platforms.
 
 The Discord bot aspect of the project provides a range of features, such as anime and manga search, character information, airing schedules, recommendation systems, and interactive commands to enhance the server experience. It leverages Discord's API and various anime-related APIs to deliver up-to-date and relevant information.
